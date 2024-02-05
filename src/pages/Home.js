@@ -1,11 +1,18 @@
 import React from "react";
-export const Home = () => {
+import "../App.css";
+// import { useState, createContext } from "react";
+import { Projects } from "./Projects";
+import { Title } from "./Title";
+
+export const Home = (props) => {
   return (
-    <div>
-      <h1>This is the HOME PAGE</h1>
-      <h1> My Name</h1>
-      <h1> Education</h1>
-      <h1> Everything I know</h1>
+    <div className="home-page">
+      <section>
+        <Title />
+      </section>
+      <section id="projects-page">
+        <Projects />
+      </section>
     </div>
   );
 };

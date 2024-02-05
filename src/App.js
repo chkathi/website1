@@ -1,10 +1,9 @@
 import "./App.css";
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { NavBar } from "./NavBar.js";
 import { Home } from "./pages/Home.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { useState } from "react";
 import { Resume } from "./pages/Resume.js";
-import { Projects } from "./pages/Projects.js";
+import { NavBar } from "./NavBar";
 
 function App() {
   return (
@@ -12,10 +11,8 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="*" element={<h1>404: Error Page</h1>} />
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/resume"} element={<Resume />} />
         </Routes>
       </Router>
     </div>
