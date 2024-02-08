@@ -3,7 +3,7 @@ import React from "react";
 export const Resume = () => {
   return (
     <div>
-      <img></img>
+      <img alt="resume" src="/" />
     </div>
   );
 };
