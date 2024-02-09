@@ -2,13 +2,19 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.js";
 
 export const Home = () => {
   return (
-    <div className="title-page">
+    <motion.div
+      className="title-page"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Container>
         <h1>Hello I'm</h1>
         <div className="typewriter">
@@ -32,6 +38,6 @@ export const Home = () => {
           </button>
         </LinkContainer>
       </Container>
-    </div>
+    </motion.div>
   );
 };
